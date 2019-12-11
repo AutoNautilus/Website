@@ -3,7 +3,7 @@
   "name": "startbootstrap-blog-home",
   "version": "4.2.1",
   "scripts": {
-    "start": "gulp watch"
+    "start": "node server.js"
   },
   "description": "A basic blog homepage HTML template built with Bootstrap",
   "keywords": [
