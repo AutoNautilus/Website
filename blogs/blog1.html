@@ -15,6 +15,15 @@
 
   <!-- Custom styles for this template -->
   <link href="../css/blog-home.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.1.1/css/ol.css" type="text/css">
+  <style>
+      .map {
+      margin-top: 20px;
+      height: 300px;
+      width: 300px;
+      }
+  </style>
+  <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.1.1/build/ol.js"></script>
 </head>
 
 <body>
@@ -55,21 +64,33 @@
       <!-- Blog Entries Column -->
       <div class="col-md-8">
 
-        <h1 class="my-4">First Blog<br>
-          <small>Big ocean, small boat</small>
+        <h1 class="my-4">Introduction to Microtransat and our boat<br>
+          <!-- <small>Big ocean, small boat</small> -->
         </h1>
 
-        <p> Hey Look! This is an example of what a blog post might look like, because it's just like an html page there's lot of flexibility for how these look and whatnot. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas venenatis neque sed mattis viverra. Nunc viverra enim ut arcu fermentum, eu facilisis risus blandit. Nullam facilisis est sit amet est laoreet dignissim. Nam sit amet venenatis lacus. Vestibulum cursus neque ut tempus tempus. Integer ultrices odio vel mi rhoncus, in pretium massa suscipit. Aenean lacinia luctus diam quis imperdiet. In bibendum risus nec nisi hendrerit, eget venenatis leo tempus. Donec nec nisi consectetur, vestibulum lorem sit amet, tempus risus. Duis rhoncus, lectus sit amet semper bibendum, nunc purus pretium sapien, ac mollis turpis nibh et augue. Vivamus neque mauris, laoreet et vehicula vestibulum, vulputate vel neque. Aenean sollicitudin, erat nec sodales porta, turpis eros pretium massa, in pretium mauris tortor id dolor. Praesent vel tristique est. Duis mattis semper tortor. Fusce quam ipsum, euismod id condimentum sed, lacinia eget nulla. Vivamus tincidunt nisl vitae viverra scelerisque.  </p>
+        <a href="https://www.microtransat.org/"> <h3>Microtransat</h3> </a>
+        <p> Microtransat is a competition where teams make small unmanned vessels to cross the Atlantic ocean. The general outline of the rules is that your boat must
+            <ul>
+                <li>Be less than 2.4 meters front to back </li>
+                <li>Transmit it's location at least every 6 hours </li>
+                <li>Be energetically autonomous</li>
+            </ul>
+                The full <a href="https://www.microtransat.org/rules.php">rules </a> can be found on their website. </p>
 
+
+        <h3>Our Boat</h3>
+        <p>Talk about our boat here</p>
         <img style="margin:30px"   src="http://placehold.it/600x300" alt="Card image cap">
 
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas venenatis neque sed mattis viverra. Nunc viverra enim ut arcu fermentum, eu facilisis risus blandit. Nullam facilisis est sit amet est laoreet dignissim. Nam sit amet venenatis lacus. Vestibulum cursus neque ut tempus tempus. Integer ultrices odio vel mi rhoncus, in pretium massa suscipit. Aenean lacinia luctus diam quis imperdiet. In bibendum risus nec nisi hendrerit, eget venenatis leo tempus. Donec nec nisi consectetur, vestibulum lorem sit amet, tempus risus. Duis rhoncus, lectus sit amet semper bibendum, nunc purus pretium sapien, ac mollis turpis nibh et augue. Vivamus neque mauris, laoreet et vehicula vestibulum, vulputate vel neque. Aenean sollicitudin, erat nec sodales porta, turpis eros pretium massa, in pretium mauris tortor id dolor. Praesent vel tristique est. Duis mattis semper tortor. Fusce quam ipsum, euismod id condimentum sed, lacinia eget nulla. Vivamus tincidunt nisl vitae viverra scelerisque. </p>
       </div>
-
-      <!-- Sidebar Widgets Column -->
+            <!-- Sidebar Widgets Column -->
       <div class="col-md-4">
 
-         <img style="margin:30px"   src="http://placehold.it/300x300" alt="Card image cap">
+          <div id="map" class="map"> </div> 
+          <br>
+          <p> Microtransat start and end lines </p>
+          <!--<img style="margin:30px"   src="http://placehold.it/300x300" alt="Card image cap">-->
 
       </div>
 
@@ -78,6 +99,24 @@
 
   </div>
   <!-- /.container -->
+  <script type="text/javascript">
+   var vector = new ol.layer.Vector({
+       source:  new ol.source.Vector({
+       url: '../res/startendlines.kml',
+       format: new ol.format.KML() })});
+      var map = new ol.Map({
+      target: 'map',
+      layers: [
+      new ol.layer.Tile({
+      source: new ol.source.OSM()
+      }), vector
+      ],
+      view: new ol.View({
+      center: ol.proj.fromLonLat([-30, 37]),
+      zoom: 2
+      })
+      });
+  </script>
 
   <!-- Footer -->
   <footer class="py-5 bg-dark">
