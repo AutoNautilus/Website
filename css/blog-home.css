@@ -6,3 +6,22 @@
 body {
   padding-top: 56px;
 }
+
+
+.technologies-box-body{
+
+	display:flex;
+	flex-direction: row-reverse;
+	align-items: center;
+}
+
+.technologies-box-body img{
+	height:300px;
+	width:auto;
+}
+
+.technologies-box-body p{
+	margin: 10px;
+	width:auto;
+	font-size: 14pt;
+}
