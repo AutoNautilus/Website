@@ -51,69 +51,98 @@
   <!-- Page Content -->
   <div class="container">
 
-    <div class="row">
+    <!-- Blog Entries Column -->
+    <div class="col-md-10">
 
-      <!-- Blog Entries Column -->
-      <div class="col-md-10">
+      <h1 class="my-4">A WPI Collablab Project <br>
+        <small>Constructing a small, autonomous research vessel to cross the Atlantic.</small>
+      </h1>
 
-        <h1 class="my-4">A WPI Collablab Project <br>
-          <small>Constructing a small, autonomous research vessel to cross the Atlantic.</small>
-        </h1>
+      <p style="font-size:14pt;"> We are a group of students from WPI who are desinging and constructing an autonomous boat to compete in the Microtransat challenge in 2020. We hope that by incorportaing new technolgies we can demonstrate the capabilities of these technologies as well as break the mictrotransat speed record.</p>
 
-        <p> We are a group of students from WPI who are desinging and constructing an autonomous boat to compete in the Microtransat challenge in 2020. We hope that by incorportaing new technolgies we can demonstrate the capabilities of these technologies as well as break the mictrotransat speed record.</p>
-
-        <h3>Our Boat</h3>
-        <p>Talk about our boat here</p>
-        <img style="margin:30px" src="../res/Boatv1Render.jpg" alt="Boat v1 Render">
-        <!-- <img style="margin:30px"   src="http://placehold.it/600x300" alt="Card image cap"> -->
-
-
-        <h4><b>Key Technologies</b></h4>
-        <br>
-        <div class="technologies-box">
-          <div class="technologies-box-title">
-            <h4>Solar Powered Drivetrain</h4>
+      <div class="text-center section-heading">The Boat</div>
+      <div class="mx-auto col-sm" style="font-size:14pt">
+        Instead of the tradiational sailboat design, Autonautilus uses an array of solar panels to generate power to drive electric motors for propulsion. A trimaran is used to maximize area to put solar panels as well as improve stability.
+      </div>
+      <br>
+      <div class="thumbnail">
+        <a class="normal-link" href="../res/Boatv1Render.jpg">
+          <img id="big-img" src="../res/Boatv1Render.jpg" alt="Lights" class="img-fluid">
+          <div class="caption">
+            <p class="text-center">A concept render demonstrating trimaran design with solar panels on top.</p>
           </div>
-          <div class="technologies-box-body">
-            <img style="margin:30px" src="../res/Diagram.jpg" alt="Powertrain Diagram">
+        </a>
+      </div>
 
-            <p> Using a large array of solar panels and batteries the boat can maintain thrust continually and power the onboard computer and navigation. This allows for long distance travel at a useful speed without the need for fossile fuels.  </p>
+      <br>
+      <div class="text-center section-heading">Key Technologies</div>
+      <br>
 
-             
-          </div>
-        </div>
-        <br>
-        <div class="technologies-box">
-          <div class="technologies-box-title">
-            <h4>Galvanic Cells</h4>
-          </div>
-          <div class="technologies-box-body">
-            <img style="margin:30px" src="https://via.placeholder.com/300" alt="Autonomous Navigation">
+      <br>
+      <!-- Solar Drivetrain -->
+      <div class="technologies-box">
 
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet nisl dapibus, malesuada odio a, molestie nunc. Aliquam erat volutpat. Aliquam imperdiet, ex vitae congue mollis, dui felis auctor metus, quis dictum magna sem ac neque.  </p>
-
-             
-          </div>
+        <div class="technologies-box-title">
+          <h4>Solar Powered Drivetrain</h4>
         </div>
 
-
-        <br>
-        <div class="technologies-box">
-          <div class="technologies-box-title">
-              <h4>Autonomous Navigation</h4>
+        <div class="row align-children">
+          <div class="col-md">
+            <p id="technologies-box-text"> A large array of solar panels and batteries the boat can maintain thrust continually and power the onboard computer and navigation. This allows for long distance travel at a useful speed without the need for fossile fuels.
+            </p>
           </div>
-          <div class="technologies-box-body">
-            <img style="margin:30px" src="https://via.placeholder.com/300" alt="Autonomous Navigation">
 
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet nisl dapibus, malesuada odio a, molestie nunc. Aliquam erat volutpat. Aliquam imperdiet, ex vitae congue mollis, dui felis auctor metus, quis dictum magna sem ac neque.  </p>
+          <div class="col-md row">
+            <img class="mx-auto" src="../res/Diagram.jpg" class="img-fluid" alt="Powertrain Diagram">
+          </div>
+        </div>
 
-             
+      </div>
+
+
+      <br>
+      <!-- Galvanic Cells -->
+      <div class="technologies-box">
+        <div class="technologies-box-title">
+          <h4>Galvanic Cells</h4>
+        </div>
+        <div class="row align-children">
+          <div class="col-md">
+            <p id="technologies-box-text"> High performance galvantic cells on the hull of the boat help prevent corrosion on any exposed metal of the boat. Additionally it can generate a small amount of energy to run the computer if the main solar battery runs out.</p>
+          </div>
+
+          <div class="col-md">
+            <div class="thumbnail">
+              <a href="https://commons.wikimedia.org/wiki/File:Galvanic_cell_with_no_cation_flow.png">
+                <img src="../res/Galvanic_cell_with_no_cation_flow.svg" alt="Lights" class="img-fluid">
+                <div class="caption">
+                  <p class="text-center">Image Source</p>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
 
-      
 
+      <br>
+      <!-- Autonomous Navigation -->
+      <div class="technologies-box">
+        <div class="technologies-box-title">
+          <h4>Autonomous Navigation</h4>
+        </div>
+        <div class="row align-children">
+          <div class="col-md">
+            <p id="technologies-box-text"> Using average weather conditions such as wind, ocean currents, and sunlight the boat can plot and follow the fastest path. Additionally using publically avaliable forcast data it can change it's course to optimize for predicted weather conditions.
+            </p>
+          </div>
+
+          <div class="col-md">
+            <img id="technologies-box-img" src="../res/BoatPathing.jpg" class="img-fluid" alt="Autonomous Navigation">
+          </div>
+        </div>
+      </div>
+      <br>
     </div>
     <!-- /.row -->
 
